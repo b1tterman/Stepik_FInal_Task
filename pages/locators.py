@@ -10,9 +10,12 @@ class LoginPageLocators():
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
 
 class ProductPageLocators():
-    ADD_CART_BUTTON = (By.CSS_SELECTOR, "button.btn-add-to-basket")
-    ITEM_PRICE = (By.XPATH, '// *[ @ id = "content_inner"] / article / div[1] / div[2] / p[1]')
-    BASKET_SUM = (By.XPATH, '//*[@id="default"]/header/div[1]/div/div[2]')
-    MESSAGE_SUM = (By.XPATH, '//*[@id="messages"]/div[3]/div/p[1]/strong')
-    ITEM_ADDED = (By.XPATH, '//*[@id="messages"]/div[1]/div')
-    ITEM_NAME = (By.XPATH, '//*[@id="content_inner"]/article/div[1]/div[2]/h1')
+    ADD_CART_BUTTON = (By.XPATH, "//button[contains(@class, 'btn-add-to-basket')]")
+    ITEM_PRICE = (By.CSS_SELECTOR, ".product_main p[class='price_color']")
+    MESSAGE_SUM = (By.CSS_SELECTOR, "div.alert div p strong")
+    ITEM_ADDED = (By.CSS_SELECTOR, "div.alertinner > strong")
+    ITEM_NAME = (By.CSS_SELECTOR, "div h1")
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
